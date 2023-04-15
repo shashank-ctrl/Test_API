@@ -56,7 +56,7 @@ select {
     <div class="col-md-12">
       <div class="form-group">
         {{ Form::label('description', 'Description:') }}
-        {{ Form::textarea('description', null, array('class' => 'form-control ckeditor ','required')) }}
+        {{ Form::textarea('description', null, array('class' => 'form-control ckeditor  ','required')) }}
     
                                            
       </div>

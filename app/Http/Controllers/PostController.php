@@ -83,7 +83,7 @@ class PostController extends Controller
         $validator = Validator::make($input,[
             'title' => 'required',
             'description' => 'required',
-            'image' => 'required',
+            
         
         ]);
      
