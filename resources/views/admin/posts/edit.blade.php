@@ -42,22 +42,24 @@ select {
         {{ Form::text('title', null, array('class' => 'form-control','required')) }}
     </div>
     </div>
-    &nbsp;
-    <div class="col-md-6">
-    <div class="form-group">
-        {{ Form::label('description', 'Description:') }}
-        {{ Form::text('description', null, array('class' => 'form-control','required')) }}
-    
-                                           
-    </div>
-    </div>
-    &nbsp;
-    <div class="col-md-5">
+
+
+    <div class="col-md-7">
                 <div class="form-group">
                     <strong>Image:</strong>
                     <input type="file" id="image" name="image" class="form-control" placeholder="Image" >
                     <img src="{{ asset ('post/'.$post->image) }}" width="100px" height="100px">
                 </div>
+    </div>
+    
+
+    <div class="col-md-12">
+      <div class="form-group">
+        {{ Form::label('description', 'Description:') }}
+        {{ Form::textarea('description', null, array('class' => 'form-control ckeditor ','required')) }}
+    
+                                           
+      </div>
     </div>
  
 </div> 
@@ -69,4 +71,10 @@ select {
 
 </div>
 </body>
+<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+       $('.ckeditor').ckeditor();
+    });
+</script>
 @endsection

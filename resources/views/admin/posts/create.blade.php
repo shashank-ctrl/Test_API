@@ -54,10 +54,10 @@ select {
              </div>          
         </div> 
 
-        <div class="col-md-6">
+        <div class="col-md-12">
                         <div class="form-group">
                             <strong>Description:</strong>
-                            <textarea class="ckeditor form-control" name="description" width="100px"></textarea>
+                            <textarea class="ckeditor form-control" name="description"></textarea>
                         </div>
                 </div>
     

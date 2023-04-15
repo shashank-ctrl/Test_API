@@ -32,7 +32,7 @@
         <tr>
             <td>{{ $posts1->id }}</td>
             <td>{{ $posts1->title }}</td>
-            <td>{{ $posts1->description }}</td>
+            <td>{{ strip_tags($posts1->description) }}</td>
             <td><img src="/post/{{ $posts1->image }}" width="100px" height="100px"></td>
             
             <td>
