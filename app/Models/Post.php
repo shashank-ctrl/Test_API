@@ -9,12 +9,33 @@ class Post extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'title', 'description','image'
-    ];
+
+    protected $fillable = ['title','description' ,'image'];
+
+   
+
+    public function addPosts($input)
+    {
+     
+        return static::create(array_only($input,$this->fillable));
+    }
+
+
+    public function findPosts($id)
+    {
+        return static::where('id',$id)->first();
+    }
+
+    
+    public function updatePosts($id, $input)
+    {
+        return static::where('id',$id)->update(array_only($input,$this->fillable));
+    }
+
+
+    public function deletePosts($id)
+    {
+        return static::where('id',$id)->delete();
+    }
+
 }

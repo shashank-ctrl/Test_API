@@ -36,7 +36,7 @@
           </a>
           <ul class="treeview-menu">
           
-            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li class="active"><a href="{{route ('admin.posts.index')}}"><i class="fa fa-circle-o"></i>Post</a></li>
           </ul>
         </li>
         
